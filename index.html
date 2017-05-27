@@ -211,7 +211,7 @@ if (!('webkitSpeechRecognition' in window)) {
  recognition.onend = function() {
    recognizing = false;
    if (ignore_onend) {
-     recognition.start();
+     recognizer.start;
    }
    start_img.src = 'mic.gif';
    if (!final_transcript) {
