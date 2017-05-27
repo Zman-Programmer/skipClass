@@ -1,0 +1,86 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+header {
+  height: 10vh;
+  background-color: rgb(17,123,189);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid black 1px;
+}
+
+header h1 {
+  margin-left: 20px;
+  font-family: 'Helvetica', 'sans-serif';
+  font-weight: lighter;
+}
+
+header #logo {
+  margin-right: 20px;
+  float: right;
+}
+
+#opening {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica', 'sans-serif';
+}
+
+#intro {
+  float: left;
+  font-size: 1.5em;
+  width: 500px;
+  margin-right: 45px;
+}
+
+#opening button {
+  background-color: rgb(17,123,189);
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  margin-left: 45px;
+  float: right;
+  width: 300px;
+  height: 50px;
+}
+
+#Notes {
+  height: 100vh;
+}
+
+#Notes h1,p,div{
+  font-family: 'Helvetica', 'sans-serif';
+  font-weight: lighter;
+}
+
+#Notes button {
+  background-color: rgb(17,123,189);
+  color: white;
+  padding: 2px;
+  border: none;
+}
+
+#Notes img {
+  float: left;
+  width: 5%;
+}
+
+#Notes .center .sidebyside {
+  width: 95%;
+  float: right;
+  border: solid black 1px;
+}
+
+#Notes div {
+
+}
