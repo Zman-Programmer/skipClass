@@ -228,10 +228,9 @@
          }
        };
        recognition.onend = function() {
-         recognizer.start();
-
-         /*start_img.src = 'mic.gif';
+         start_img.src = 'mic.gif';
          if (!final_transcript) {
+           recognizer.start();
            showInfo('info_start');
            return;
          }
