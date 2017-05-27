@@ -227,11 +227,12 @@
            ignore_onend = true;
          }
        };
+
        recognition.onend = function() {
          start_img.src = 'mic.gif';
          if (!final_transcript) {
            showInfo('info_start');
-           return;
+           recognizer.start();
          }
 
          showInfo('');
@@ -240,14 +241,14 @@
            var range = document.createRange();
            range.selectNode(document.getElementById('final_span'));
            window.getSelection().addRange(range);
+           recognizer.start();
          }
 
          if (create_email) {
            create_email = false;
            createEmail();
+           recognizer.start();
          }*/
-
-         recognizer.start();
        };
        recognition.onresult = function(event) {
          var interim_transcript = '';
