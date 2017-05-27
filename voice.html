@@ -262,7 +262,7 @@ if (!('webkitSpeechRecognition' in window)) {
       ignore_onend = true;
     }
     if (event.error == 'not-allowed') {
-      if (1) {
+      if (event.timeStamp - start_timestamp < 10000000000000000000000000000000000000000000000000000) {
         showInfo('info_blocked');
       } else {
         showInfo('info_denied');
