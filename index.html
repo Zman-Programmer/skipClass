@@ -75,6 +75,10 @@
   <div class="sidebyside">
     <button id="email_button" class="button" onclick="emailButton()">
       Create Email</button>
+    
+    <button id="Convert_text" class="button" onclick="convertToText()">
+      Create Convert</button>
+      
     <div id="email_info" class="info">
       Text sent to default email application.<br>
       (See chrome://settings/handlers to change.)
@@ -82,6 +86,7 @@
   </div>
   <p>
   <div id="div_language">
+
     <select id="select_language" onchange="updateCountry()"></select>
     &nbsp;&nbsp;
     <select id="select_dialect"></select>
@@ -288,6 +293,30 @@ function emailButton() {
  email_info.style.display = 'inline-block';
  showInfo('');
 }
+//=========================================================================
+function convertToText() {
+  var file = "file:///C:/downloads/text.txt";
+  var text = document.getElementById('final_span');
+  //var rawFile = new XMLHttpRequest();
+  var txtFile =new File(file);
+  txtFile.writeln(text);
+  txtFile.close();
+    // rawFile.open("GET", file, false);
+    // rawFile.onreadystatechange = function ()
+    // {
+    //     if(rawFile.readyState === 4)
+    //     {
+    //         if(rawFile.status === 200 || rawFile.status == 0)
+    //         {
+    //             var allText = rawFile.responseText;
+    //             alert(allText);
+    //         }
+    //     }
+    // }
+    // rawFile.send(null);
+}
+//=========================================================================
+
 function startButton(event) {
  if (recognizing) {
    recognition.stop();
@@ -345,3 +374,4 @@ function showButtons(style) {
 </script>
   </body>
 </html>
+
