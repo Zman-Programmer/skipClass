@@ -209,9 +209,9 @@ if (!('webkitSpeechRecognition' in window)) {
    }
  };
  recognition.onend = function() {
-   recognizing = true;
+   recognizing = false;
    if (ignore_onend) {
-     return;
+     recognition.start();
    }
    start_img.src = 'mic.gif';
    if (!final_transcript) {
