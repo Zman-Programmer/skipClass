@@ -209,7 +209,7 @@ if (!('webkitSpeechRecognition' in window)) {
    }
  };
  recognition.onend = function() {
-   recognizing = false;
+   recognizing = true;
    if (ignore_onend) {
      return;
    }
