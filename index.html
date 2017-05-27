@@ -230,7 +230,6 @@
        recognition.onend = function() {
          start_img.src = 'mic.gif';
          if (!final_transcript) {
-           recognizer.start();
            showInfo('info_start');
            return;
          }
@@ -247,6 +246,8 @@
            create_email = false;
            createEmail();
          }*/
+
+         recognizer.start();
        };
        recognition.onresult = function(event) {
          var interim_transcript = '';
