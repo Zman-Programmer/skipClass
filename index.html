@@ -75,15 +75,20 @@
   <div class="sidebyside">
     <button id="email_button" class="button" onclick="emailButton()">
       Create Email</button>
-    
-    <button id="Convert_text" class="button" onclick="convertToText()">
-      Create Convert</button>
-      
     <div id="email_info" class="info">
       Text sent to default email application.<br>
       (See chrome://settings/handlers to change.)
     </div>
   </div>
+
+  <div class="sidebyside">
+    <button id="Convert_text" class="button" onclick="convertToText()">
+      Create Convert</button>
+    <div id="output_info" class="info">
+      Press Control-C to copy text.<br>(Command-C on Mac.)
+    </div>
+  </div>
+
   <p>
   <div id="div_language">
 
@@ -203,7 +208,7 @@ if (!('webkitSpeechRecognition' in window)) {
      ignore_onend = true;
    }
    if (event.error == 'not-allowed') {
-     if (event.timeStamp - start_timestamp < 100) {
+     if (event.timeStamp - start_timestamp < 1000000000) {
        showInfo('info_blocked');
      } else {
        showInfo('info_denied');
@@ -301,6 +306,10 @@ function convertToText() {
   var txtFile =new File(file);
   txtFile.writeln(text);
   txtFile.close();
+
+  Convert_text.style.display = 'none';
+  output_info.style.display = 'inline-block';
+  showInfo('');
     // rawFile.open("GET", file, false);
     // rawFile.onreadystatechange = function ()
     // {
@@ -374,4 +383,5 @@ function showButtons(style) {
 </script>
   </body>
 </html>
+
 
