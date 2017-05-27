@@ -228,6 +228,10 @@
          }
        };
 
+       if(document.addEventListener("q")){
+          recognizer.quit();
+       };
+
        recognition.onend = function() {
          start_img.src = 'mic.gif';
          if (!final_transcript) {
