@@ -7,3 +7,6 @@ New features coming soon include:
 -Quick Summary: which finds and summarizes information from the lecture using key words and uses a summarizing algorithm to summarize the whole lecture to a quick summary easy for the user to read 
 -Smart Format: adds formatting features such structuring information into paragraphs, fixes grammatical errors, and allows additional resources such as graphs to be added later on
 -Note Share: allows users to share notes and includes the feature of using the Amazon Echo to record the lecture for multiple computers in real-time
+
+https://www.google.com/intl/en/chrome/demos/speech.html
+
